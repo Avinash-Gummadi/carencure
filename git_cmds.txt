@@ -1,0 +1,7 @@
+git init
+git remote add origin https://github.com/Avinash-Gummadi/carencure.git
+git status
+git branch
+git checkout main
+git add .
+git commit -m "msg"
