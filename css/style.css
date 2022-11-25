@@ -6,7 +6,9 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   color: #6c6c6f;
   background-color: #fff;
@@ -72,7 +74,7 @@ section {
  *  Common CSS
  */
 .bg-lightred {
-  background-color: #fff9f8;
+  background-color: #f1fff1;
 }
 
 .btn {
@@ -86,6 +88,7 @@ section {
   text-transform: uppercase;
   min-width: 170px;
   padding: 20px 15px;
+  border-radius: 40px;
 }
 
 .btn-round {
@@ -131,7 +134,7 @@ section {
 }
 
 .sec-heading {
-  margin-bottom: 70px;
+  margin-bottom: 40px;
   position: relative;
   text-align: center;
 }
@@ -267,11 +270,22 @@ section {
   line-height: 75px;
   margin-bottom: 25px;
 }
-
+.banner .h2-1 {
+  margin-bottom: 1px;
+  line-height: 50px;
+}
+.banner .h2-2 {
+  margin-left: 150px;
+  font-size: 35px;
+}
 @media screen and (max-width: 1199px) {
   .banner h2 {
     font-size: 49px;
     line-height: 60px;
+  }
+  .banner .h2-2 {
+    margin-left: 50px;
+    font-size: 32px;
   }
 }
 
@@ -279,6 +293,10 @@ section {
   .banner h2 {
     font-size: 44px;
     line-height: 54px;
+  }
+  .banner .h2-2 {
+    margin-left: 50px;
+    font-size: 28px;
   }
 }
 
@@ -418,6 +436,7 @@ section {
   transition: all 300ms ease-in-out;
   padding: 20px;
   margin-bottom: 30px;
+  border-radius: 5px;
 }
 
 .post img {
@@ -497,12 +516,15 @@ section {
 }
 
 .testimonial .owl-dots span {
-  background-color: #ffc3c2;
+  background-color: #7a8401;
   border-radius: 50%;
   display: inline-block;
   margin: 0 5px;
   height: 8px;
   width: 8px;
+}
+.testimonial .owl-dots .active span {
+  background-color: #000000;
 }
 
 .appointment .v2 {
@@ -559,7 +581,7 @@ section {
 }
 
 .appointment-form {
-  background-color: #fff9f8;
+  background-color: #f1fff1;
 }
 
 .appointment-form .form-field {
@@ -974,7 +996,7 @@ section {
 }
 
 .footer {
-  background-color: #fff9f8;
+  background-color: #f1fff1;
   padding: 80px 0 60px;
 }
 
