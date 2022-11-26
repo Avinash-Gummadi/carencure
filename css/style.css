@@ -182,7 +182,24 @@ section {
   width: 100%;
   z-index: 1;
 }
+.fix-menu {
+  position: fixed;
+  top: 40%;
+  right: 0;
+  width: 47px;
+  z-index: 1;
+  gap: 15px;
+}
+.fix-menu span{
+  display: block;
+  color: #0fcf00;
+  font-size: 32px;
+}
 
+.fix-menu span:hover{
+  color: #ff817e !important;
+  scale: 1.1;
+}
 .logo {
   display: block;
   max-width: 109px;
@@ -365,7 +382,7 @@ section {
 .banner .spa-img {
   width: 43.4%;
   position: absolute;
-  right: 30px;
+  right: 60px;
   top: 100px;
 }
 
