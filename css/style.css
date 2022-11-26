@@ -256,12 +256,56 @@ section {
 }
 
 .banner span {
-  color: #3aa10f;
   display: block;
   font-family: "Rufina", serif;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   margin-bottom: 20px;
+  text-decoration: none;
+  color: #fff;
+  animation: color-change 1s 2s infinite;
+}
+@-webkit-keyframes color-change {
+  0% {
+    text-shadow: -2px 0px 5px rgb(24 151 227 / 98%), 2px 3px 5px #1baaff,
+      3px 0px 5px #1baaff, -3px -2px 5px #1baaff;
+  }
+  50% {
+    text-shadow: -2px 0px 5px rgb(50 153 54), 2px 3px 5px #22c629,
+      3px 0px 5px #25d92c, -3px -2px 5px #07ea10;
+  }
+  100% {
+    text-shadow: -2px 0px 5px rgb(208 66 56), 2px 3px 5px #da271a,
+      3px 0px 5px #e11c0e, -3px -2px 5px #fc1504;
+  }
+}
+@-ms-keyframes color-change {
+  0% {
+    text-shadow: -2px 0px 5px rgb(24 151 227 / 98%), 2px 3px 5px #1baaff,
+      3px 0px 5px #1baaff, -3px -2px 5px #1baaff;
+  }
+  50% {
+    text-shadow: -2px 0px 5px rgb(50 153 54), 2px 3px 5px #22c629,
+      3px 0px 5px #25d92c, -3px -2px 5px #07ea10;
+  }
+  100% {
+    text-shadow: -2px 0px 5px rgb(208 66 56), 2px 3px 5px #da271a,
+      3px 0px 5px #e11c0e, -3px -2px 5px #fc1504;
+  }
+}
+@keyframes color-change {
+  0% {
+    text-shadow: -2px 0px 5px rgb(24 151 227 / 98%), 2px 3px 5px #1baaff,
+      3px 0px 5px #1baaff, -3px -2px 5px #1baaff;
+  }
+  50% {
+    text-shadow: -2px 0px 5px rgb(50 153 54), 2px 3px 5px #22c629,
+      3px 0px 5px #25d92c, -3px -2px 5px #07ea10;
+  }
+  100% {
+    text-shadow: -2px 0px 5px rgb(208 66 56), 2px 3px 5px #da271a,
+      3px 0px 5px #e11c0e, -3px -2px 5px #fc1504;
+  }
 }
 
 .banner h2 {
@@ -475,12 +519,11 @@ section {
 .testimonial .single-tst {
   position: relative;
   text-align: center;
-  margin-bottom: 30px;
 }
 
 .testimonial .single-tst img {
-  margin: 0 auto 45px;
-  width: 59px;
+  width: 100%;
+  height: 250px;
 }
 
 .testimonial .single-tst p {
@@ -522,6 +565,9 @@ section {
   margin: 0 5px;
   height: 8px;
   width: 8px;
+}
+.owl-carousel button.owl-dot {
+  outline: none;
 }
 .testimonial .owl-dots .active span {
   background-color: #000000;
