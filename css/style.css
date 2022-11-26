@@ -321,8 +321,8 @@ section {
 .banner .spa-img {
   width: 43.4%;
   position: absolute;
-  right: 0;
-  top: 0;
+  right: 30px;
+  top: 100px;
 }
 
 @media screen and (max-width: 767px) {
