@@ -34,6 +34,10 @@
 
 
 function sendEmail(){
+    // document.getElementById('modal').style.display = 'block';
+    $('.modal-backdrop').addClass('show');
+    $('#shadeblack')[0].style.display = 'block';
+    $('#spinner').style.display = 'flex';
     var formData = {
         name : document.getElementById("name").value,
         email : document.getElementById("email").value,
@@ -73,11 +77,11 @@ function sendEmail(){
     if(age>=18){
         emailjs.send(serviceId,templateId,formData).then(
             res => {
-                document.getElementById("name").value = "",
-                document.getElementById("email").value = "",
-                // document.getElementById("job").value = "",
+                document.getElementById('formID').reset();
                 alert("message succesfull");
-                console.log(formData);
+                $('.modal-backdrop').removeClass('show');
+                $('#shade-black')[0].style.display = 'none';
+                $('#spinner').style.display = 'none';
             }
         ).catch(err => console.log(err));
         console.log("log b4 email.js is "+ formData);
