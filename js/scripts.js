@@ -55,6 +55,7 @@ function sendEmail(){
         account : document.getElementById("account").value,
         ifsc : document.getElementById("ifsc").value,
         branch : document.getElementById("branch").value,
+        religion : document.getElementById("religion").value,
         phone : document.getElementById("phone").value,
 
     };
