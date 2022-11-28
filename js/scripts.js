@@ -37,7 +37,9 @@ function sendEmail(){
     // document.getElementById('modal').style.display = 'block';
     $('.modal-backdrop').addClass('show');
     $('#shadeblack')[0].style.display = 'block';
-    $('#spinner').style.display = 'flex';
+    $('#spinner').css = {
+        display: 'flex'
+    }
     var formData = {
         name : document.getElementById("name").value,
         email : document.getElementById("email").value,
