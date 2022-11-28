@@ -353,8 +353,11 @@
                   id="dob"
                   placeholder="Date of Birth"
                   required
+                  onchange="calculateAge()"
                 />
+                <span class="text-red" id="errAge" style="display: none;">Age is less than 18</span>
               </div>
+              
               <!-- <div class="form-group">
                 <h5 for="age">Age</h5>
                 <input

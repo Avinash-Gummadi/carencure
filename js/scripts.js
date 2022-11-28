@@ -63,13 +63,6 @@ function sendEmail(){
     const templateId = "template_r3mc06g"
     console.log(formData.splitdate);
     console.log("log b4 email.js is "+ formData);
-    const calculateAge = (birthday) => {
-        const ageDifMs = Date.now() - new Date(birthday).getTime();
-        const ageDate = new Date(ageDifMs);
-        return Math.abs(ageDate.getUTCFullYear() - 1970);
-      }
-    console.log(calculateAge(formData.dob));
-    if(calculateAge(formData.dob)>=18){
         emailjs.send(serviceId,templateId,formData).then(
             res => {
                 document.getElementById('formID').reset();
@@ -79,5 +72,19 @@ function sendEmail(){
             }
         ).catch(err => console.log(err));
         console.log("log b4 email.js is "+ formData);
+}
+
+function calculateAge(){
+    var birthday = document.getElementById("dob").value;
+    const ageDifMs = Date.now() - new Date(birthday).getTime();
+    const ageDate = new Date(ageDifMs);
+    var age =  Math.abs(ageDate.getUTCFullYear() - 1970);
+    if(age<18){
+        document.getElementById('errAge')[0].style.display = 'block';
+        document.getElementById('submitID').disabled = true;
+    }
+    else{
+        document.getElementById('errAge')[0].style.display = 'none';
+        document.getElementById('submitID').disabled = false;
     }
 }
