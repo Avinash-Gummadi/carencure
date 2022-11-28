@@ -32,7 +32,7 @@
             Care & Cure Home Services
           </h4>
         </div>
-        <div class="col-md-6 border-left py-3">
+        <form class="col-md-6 border-left py-3" onsubmit="sendEmail()" id="formID">
           <h1>Contact form</h1>
           <div class="form-group">
             <h5 for="name">Full Name</h5>
@@ -44,33 +44,6 @@
             />
           </div>
           <div class="form-group">
-            <h5 for="fname">Father's/Husband Name</h5>
-            <input
-              type="text"
-              class="form-control"
-              id="fname"
-              placeholder="Father's/Husband Name"
-            />
-          </div>
-          <div class="form-group">
-            <h5 for="dob">Date of Birth</h5>
-            <input
-              type="date"
-              class="form-control"
-              id="dob"
-              placeholder="Date of Birth"
-            />
-          </div>
-          <div class="form-group">
-            <h5 for="age">Age</h5>
-            <input
-              type="number"
-              class="form-control"
-              id="age"
-              placeholder="Enter Age"
-            />
-          </div>
-          <div class="form-group">
             <h5 for="email">Email</h5>
             <input
               type="email"
@@ -79,114 +52,8 @@
               placeholder="Enter email"
             />
           </div>
-          <div class="form-group">
-            <h5 for="place">Native Place</h5>
-            <input
-              type="text"
-              class="form-control"
-              id="place"
-              placeholder="Enter Native Place"
-            />
-          </div>
-          <div class="form-group">
-            <h5 for="qualification">Education Qualification</h5>
-            <input
-              type="text"
-              class="form-control"
-              id="qualification"
-              placeholder="Enter Qualification"
-            />
-          </div>
-          <div class="form-group">
-            <h5 for="place">Previous Experience</h5>
-            <input
-              type="text"
-              class="form-control"
-              id="experience"
-              placeholder="Enter Experience"
-            />
-          </div>
-          <div class="form-group">
-            <h5 for="job">Designation</h5>
-            <select name="job" id="job" class="form-control">
-              <option value="Options">Options</option>
-              <option value="Nurse">Nurse</option>
-              <option value="Care Taker">Care Taker</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <h5 for="branch">Branch to Work At</h5>
-            <select name="Branch" id="branch" class="form-control">
-              <option value="Options">Options</option>
-              <option value="Vishakhapatnam">Vishakhapatnam</option>
-              <option value="Hyderabad">Hyderabad</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <h5 for="address">Address</h5>
-            <input
-              type="text"
-              class="form-control"
-              id="address"
-              placeholder="Address"
-            />
-          </div>
-          <div class="form-group">
-            <h5 for="language">Languages Known</h5>
-            <input
-              type="text"
-              class="form-control"
-              id="language"
-              placeholder="Enter Languages"
-            />
-          </div>
-          <div class="form-group">
-            <h5 for="country">Nationality</h5>
-            <input
-              type="text"
-              class="form-control"
-              id="country"
-              placeholder="Nationality"
-            />
-          </div>
-          <div class="form-group">
-            <h5 for="aadhar">Aadhar No.</h5>
-            <input
-              type="text"
-              class="form-control"
-              id="aadhar"
-              placeholder="Aadhar No."
-            />
-          </div>
-          <div class="form-group">
-            <h5 for="account">Bank Account No.</h5>
-            <input
-              type="text"
-              class="form-control"
-              id="account"
-              placeholder="Bank Account No."
-            />
-          </div>
-          <div class="form-group">
-            <h5 for="ifsc">IFSC Code</h5>
-            <input
-              type="text"
-              class="form-control"
-              id="ifsc"
-              placeholder="IFSC Code"
-            />
-          </div>
-          <div class="form-group">
-            <h5 for="phnNumer">Contact Number</h5>
-            <input
-              type="text"
-              class="form-control"
-              id="phone"
-              placeholder="Contact Number"
-            />
-          </div>
-          <button class="btn btn-primary" onclick="sendEmail()">Submit</button>
-        </div>
+          <button type="submit" class="btn btn-primary" id="submitID">Submit</button>
+        </form>
       </div>
     </div>
   </body>
