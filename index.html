@@ -16,6 +16,15 @@
     <title>Care n Cure || We care for you</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.png">
 
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("eFRF_eDmoCkh9VpYY");
+      })();
+    </script>
   </head>
   <body class="home-two">
 
@@ -106,35 +115,35 @@
           </div>
           <div class="col-md-4">
             <article class="post">
-              <img src="images/post/1.jpg" alt="">
+              <img src="images/homenursing.jpg" alt="">
               <h4><a href="services.html">Home Nursing Services  24*7</a></h4>
               <p>Living winged said you darkness you're divide gathered and bring one seasons face great dr Waters firmament place which.</p>
             </article>
           </div>
           <div class="col-md-4">
             <article class="post">
-              <img src="images/post/1.jpg" alt="">
+              <img src="images/babycare.jpg" alt="">
               <h4><a href="services.html">Baby Care Services  24*7</a></h4>
               <p>Living winged said you darkness you're divide gathered and bring one seasons face great dr Waters firmament place which.</p>
             </article>
           </div>
           <div class="col-md-4">
             <article class="post">
-              <img src="images/post/2.jpg" alt="">
+              <img src="images/medicalrental.png" alt="">
               <h4><a href="services.html">Medical Rental Equipments</a></h4>
               <p>We supply home Medical Equipment in Vijayawada along with medical care services right at your doorstep. Care n Cure Home Health Care Services team understands your medical condition, builds a personalized care plan and delivers reliable and best-in-class Medical Equipment. Our delivery personnel are supported by biomedical engineers for expert installation and demo services</p>
             </article>
           </div>
           <div class="col-md-4">
             <article class="post">
-              <img src="images/post/3.jpg" alt="">
+              <img src="images/physiotherapy.jpg" alt="">
               <h4><a href="services.html">Physiotheraphy Services</a></h4>
               <p>At Care n Cure, We bring you Physiotheraphy expertise for a wide range of medical conditions such as persistent pain, post stroke care, chronic pulmonary conditions, geriatric, pediatric care, post operative care, sports and muscular injuries right at the comfort of your home. Our Proven techniques, standardized approach and continuous commitment for all your Physiotheraphy needs.</p>
             </article>
           </div>
           <div class="col-md-4">
             <article class="post">
-              <img src="images/post/1.jpg" alt="">
+              <img src="images/rehab.jpg" alt="">
               <h4><a href="services.html">Rehab Services  24*7</a></h4>
               <p>Living winged said you darkness you're divide gathered and bring one seasons face great dr Waters firmament place which.</p>
             </article>
@@ -329,30 +338,164 @@
         <figure>
           <img src="images/appointment-img.jpg" alt="">
         </figure>
-        <div class="appointment-form">
-          <form action="#">
-            <div class="form-field half-width">
-              <input type="text" placeholder="NAME" required>
-              <input type="email" placeholder="Email address" required>
-            </div>
-            <div class="form-field half-width">
-              <div class="select-field">
-                <select>
-                  <option>Select service</option>
-                  <option>Select service 1</option>
+        <div class="container border mt-3 bg-light">
+          <div class="row">
+            <div class="col-md-6 border-left py-3">
+              <h1>Contact form</h1>
+              <div class="form-group">
+                <h5 for="name">Full Name</h5>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  placeholder="Enter name"
+                />
+              </div>
+              <div class="form-group">
+                <h5 for="fname">Father's/Husband Name</h5>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="fname"
+                  placeholder="Father's/Husband Name"
+                />
+              </div>
+              <div class="form-group">
+                <h5 for="dob">Date of Birth</h5>
+                <input
+                  type="date"
+                  class="form-control"
+                  id="dob"
+                  placeholder="Date of Birth"
+                />
+              </div>
+              <div class="form-group">
+                <h5 for="age">Age</h5>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="age"
+                  placeholder="Enter Age"
+                />
+              </div>
+              <div class="form-group">
+                <h5 for="email">Email</h5>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Enter email"
+                />
+              </div>
+              <div class="form-group">
+                <h5 for="place">Native Place</h5>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="place"
+                  placeholder="Enter Native Place"
+                />
+              </div>
+              <div class="form-group">
+                <h5 for="qualification">Education Qualification</h5>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="qualification"
+                  placeholder="Enter Qualification"
+                />
+              </div>
+              <div class="form-group">
+                <h5 for="place">Previous Experience</h5>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="experience"
+                  placeholder="Enter Experience"
+                />
+              </div>
+              <div class="form-group">
+                <h5 for="job">Designation</h5>
+                <select name="job" id="job" class="form-control">
+                  <option value="Options">Options</option>
+                  <option value="Nurse">Nurse</option>
+                  <option value="Care Taker">Care Taker</option>
                 </select>
               </div>
-              <input type="tel" placeholder="Phone numer">
+              <div class="form-group">
+                <h5 for="branch">Branch to Work At</h5>
+                <select name="Branch" id="branch" class="form-control">
+                  <option value="Options">Options</option>
+                  <option value="Vishakhapatnam">Vishakhapatnam</option>
+                  <option value="Hyderabad">Hyderabad</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <h5 for="address">Address</h5>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="address"
+                  placeholder="Address"
+                />
+              </div>
+              <div class="form-group">
+                <h5 for="language">Languages Known</h5>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="language"
+                  placeholder="Enter Languages"
+                />
+              </div>
+              <div class="form-group">
+                <h5 for="country">Nationality</h5>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="country"
+                  placeholder="Nationality"
+                />
+              </div>
+              <div class="form-group">
+                <h5 for="aadhar">Aadhar No.</h5>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="aadhar"
+                  placeholder="Aadhar No."
+                />
+              </div>
+              <div class="form-group">
+                <h5 for="account">Bank Account No.</h5>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="account"
+                  placeholder="Bank Account No."
+                />
+              </div>
+              <div class="form-group">
+                <h5 for="ifsc">IFSC Code</h5>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="ifsc"
+                  placeholder="IFSC Code"
+                />
+              </div>
+              <div class="form-group">
+                <h5 for="phnNumer">Contact Number</h5>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="phone"
+                  placeholder="Contact Number"
+                />
+              </div>
+              <button class="btn btn-primary" onclick="sendEmail()">Submit</button>
             </div>
-            <div class="form-field half-width">
-              <input type="date" placeholder="date">
-              <input type="time" placeholder="time">
-            </div>
-            <div class="form-field">
-              <textarea name="notes" placeholder="Your notes"></textarea>
-            </div>
-            <button class="btn btn-round">Make an Appointment</button>
-          </form>
+          </div>
         </div>
       </div>
     </section>
