@@ -63,18 +63,13 @@ function sendEmail(){
     const templateId = "template_r3mc06g"
     console.log(formData.splitdate);
     console.log("log b4 email.js is "+ formData);
-    var age = () => {
-        sDate = formData.dob.split('/');
-        var todayDate = new Date().getMilliseconds;
-        var birthDate = new Date(birthDateSplit[2],birthDateSplit[1],birthDateSplit[0]);
-        var day = birthDate[2]*86400000;
-        var month = birthDate[1]*2629746000;
-        var year = birthDate[0]*31556952000;
-        var ag = todayDate - (day + month + year);
-        return ag;
-    }
-    console.log(age);
-    if(age>=18){
+    const calculateAge = (birthday) => {
+        const ageDifMs = Date.now() - new Date(birthday).getTime();
+        const ageDate = new Date(ageDifMs);
+        return Math.abs(ageDate.getUTCFullYear() - 1970);
+      }
+    console.log(calculateAge(formData.dob));
+    if(calculateAge(formData.dob)>=18){
         emailjs.send(serviceId,templateId,formData).then(
             res => {
                 document.getElementById('formID').reset();
