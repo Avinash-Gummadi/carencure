@@ -80,11 +80,11 @@ function calculateAge(){
     const ageDate = new Date(ageDifMs);
     var age =  Math.abs(ageDate.getUTCFullYear() - 1970);
     if(age<18){
-        document.getElementById('errAge')[0].style.display = 'block';
+        document.getElementById('errAge').style.display = 'block';
         document.getElementById('submitID').disabled = true;
     }
     else{
-        document.getElementById('errAge')[0].style.display = 'none';
+        document.getElementById('errAge').style.display = 'none';
         document.getElementById('submitID').disabled = false;
     }
 }
