@@ -32,7 +32,13 @@
 
 }) (jQuery)
 
-
+function openform(option) {
+    if (parseInt(option) == 1) {
+        $('#formID')[0].style.display = 'block';        
+    } else{
+        $('#formID')[0].style.display = 'none';        
+    }
+}
 function sendEmail(){
     // document.getElementById('modal').style.display = 'block';
     $('.modal-backdrop').addClass('show');
