@@ -191,7 +191,7 @@ section {
   top: 40%;
   right: 0;
   width: 47px;
-  z-index: 1;
+  z-index: 999;
   gap: 15px;
 }
 .fix-menu span{
@@ -379,7 +379,10 @@ section {
 @media screen and (max-width: 479px) {
   .banner .video-btn {
     display: block;
-    margin-top: 30px;
+    margin-top: 20px;
+  }
+  .testimonial .single-tst img {
+    height: 120px !important;
   }
 }
 
@@ -392,7 +395,36 @@ section {
 
 @media screen and (max-width: 767px) {
   .banner .spa-img {
-    display: none;
+    width: 100%;
+    left: 0;
+    right: 0;
+    opacity: 0.2;
+    top: 0;
+  }
+  .ph_row {
+    flex-wrap: nowrap;
+  }
+  .primary-menu {
+    position: absolute;
+    left: 0;
+    right: 15px;
+    top: 80px;
+  }
+  .banner p{
+    margin-bottom: 0;
+    text-align: center;
+    font-weight: bolder;
+    color: #000;
+  }
+  .banner .h2-2{
+    margin-bottom: 10px;
+  }
+  .spa-img img{
+    height: 410px;
+  }
+  .d-block.text-dark{
+    color: #000 !important;
+    font-weight: 400;
   }
 }
 
