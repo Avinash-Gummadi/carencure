@@ -222,6 +222,24 @@ section {
   margin-top: 300px;
   margin-left: -70px;
 }
+.heading-h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 32px;
+  color: #495057;
+  font-weight: 900;
+}
+.counter-v1 .number-wrap .number {
+  font-size: 69px;
+  font-weight: 900;
+  font-family: "Arimo", sans-serif;
+  color: #8eae03;
+}
+.counter-v1 .counter-label {
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  font-size: 11px;
+  font-weight: 900;
+}
 @media screen and (max-width: 767px) {
   .primary-menu .mobile-menu, .footer .foo-nav .mobile-menu {
     color: #ff817e;
@@ -233,6 +251,17 @@ section {
   }
   .logo h2{
     font-size: 18px;
+  }
+  .counter-v1 .number-wrap .number {
+    font-size: 30px;
+  }
+  .unslate_co--section.section-counter .row{
+    align-items: center;
+    padding-top: 0 !important;
+  }
+  .unslate_co--section.section-counter .col-6.col-sm-6.mb-5.mb-lg-0.col-md-6.col-lg-3{
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
   }
 }
 
