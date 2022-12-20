@@ -190,7 +190,7 @@ section {
 }
 .fix-menu {
   position: fixed;
-  top: 40%;
+  top: 45%;
   right: 0;
   width: 47px;
   z-index: 999;
