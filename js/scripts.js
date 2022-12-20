@@ -66,18 +66,26 @@ function openform(option) {
     } 
     else if (parseInt(option) == 2) {
         $('#formID1')[0].style.display = 'block';
+        $('#formID')[0].style.display = 'none';        
         document.getElementById("job").value = "Care Taker"        
         document.getElementById("job").disabled = true        
     }
     else if (parseInt(option) == 3) {
         $('#formID1')[0].style.display = 'block';
+        $('#formID')[0].style.display = 'none';
         document.getElementById("job").value = "Physiotheraphy"        
         document.getElementById("job").disabled = true        
     }
     else if (parseInt(option) == 4) {
         $('#formID1')[0].style.display = 'block';
+        $('#formID')[0].style.display = 'none';
         document.getElementById("job").value = "Nursing"        
         document.getElementById("job").disabled = true        
+    }
+    else if (parseInt(option) == 5) {
+        $('#formID')[0].style.display = 'none';
+        // document.getElementById("job").value = "Nursing"        
+        // document.getElementById("job").disabled = true        
     }
     else{
         $('#formID1')[0].style.display = 'none';        
