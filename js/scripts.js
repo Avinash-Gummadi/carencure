@@ -87,6 +87,10 @@ function openform(option) {
         // document.getElementById("job").value = "Nursing"        
         // document.getElementById("job").disabled = true        
     }
+    else if (parseInt(option) == 7) {
+        $('#formID1')[0].style.display = 'none';
+        $('#formID')[0].style.display = 'block';       
+    }
     else{
         $('#formID1')[0].style.display = 'none';        
     }
