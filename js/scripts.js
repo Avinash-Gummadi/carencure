@@ -63,8 +63,24 @@ counter();
 function openform(option) {
     if (parseInt(option) == 1) {
         $('#formID')[0].style.display = 'block';        
-    } else{
-        $('#formID')[0].style.display = 'none';        
+    } 
+    else if (parseInt(option) == 2) {
+        $('#formID1')[0].style.display = 'block';
+        document.getElementById("job").value = "Care Taker"        
+        document.getElementById("job").disabled = true        
+    }
+    else if (parseInt(option) == 3) {
+        $('#formID1')[0].style.display = 'block';
+        document.getElementById("job").value = "Physiotheraphy"        
+        document.getElementById("job").disabled = true        
+    }
+    else if (parseInt(option) == 4) {
+        $('#formID1')[0].style.display = 'block';
+        document.getElementById("job").value = "Nursing"        
+        document.getElementById("job").disabled = true        
+    }
+    else{
+        $('#formID1')[0].style.display = 'none';        
     }
 }
 function sendEmail(){
