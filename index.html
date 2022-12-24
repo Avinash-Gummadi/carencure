@@ -375,202 +375,208 @@
             <div class="col-lg-8 col-md-10 m-auto">
               <div class="sec-heading">
                 <h3>JOIN WITH US</h3>
-                <button type="button" class="btn btn-primary" onClick="openform(1)">Apply</button>
+                <button type="button" class="btn btn-success" onClick="openform(1)">Apply</button>
               </div>
             </div>
           </div>
           <div id="formID" style="display: none;">
-            <button type="button" class="btn btn-primary" onClick="openform(2)">Care Taker</button>
-            <button type="button" class="btn btn-primary" onClick="openform(3)">Physiotheraphy</button>
-            <button type="button" class="btn btn-primary" onClick="openform(4)">Nursing</button>
+            <button type="button" class="btn btn-success" onClick="openform(2)">Care Taker</button>
+            <button type="button" class="btn btn-success" onClick="openform(3)">Physiotheraphy</button>
+            <button type="button" class="btn btn-success" onClick="openform(4)">Nursing</button>
             <button type="button" class="btn btn-danger" onClick="openform(5)">Close</button>
           </div>
           <div class="row align-items-center justify-content-center">
             <form class="col-md-6 border-left py-3" onsubmit="return !2" id="formID1" style="display: none;">
-              <h1>Contact form</h1>
-              <div class="form-group">
-                <h5 for="name">Full Name</h5>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="name"
-                  placeholder="Enter name"
-                  required
-                />
+              <div id="succ_rply" style="display: none;">
+                <h1>Your response recorded successfully</h1>
+                <button type="button" class="btn btn-danger" onClick="openform()">Close</button>
               </div>
-              <div class="form-group">
-                <h5 for="fname">Father's/Husband Name</h5>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="fname"
-                  placeholder="Father's/Husband Name"
-                  required
-                />
+              <div id="form_div">
+                <h1>Contact form</h1>
+                <div class="form-group">
+                  <h5 for="name">Full Name</h5>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    placeholder="Enter name"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <h5 for="fname">Father's/Husband Name</h5>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="fname"
+                    placeholder="Father's/Husband Name"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <h5 for="dob">Date of Birth</h5>
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="dob"
+                    placeholder="Date of Birth"
+                    required
+                    onchange="calculateAge()"
+                  />
+                  <span class="text-danger" id="errAge" style="display: none;">Age is less than 18</span>
+                </div>
+                
+                <div class="form-group">
+                  <h5 for="age">Age</h5>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="age"
+                    placeholder="Enter Age"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <h5 for="email">Email</h5>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="Enter email"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <h5 for="email">Job</h5>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="job"
+                    placeholder="Enter job"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <h5 for="place">Native Place</h5>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="place"
+                    placeholder="Enter Native Place"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <h5 for="qualification">Education Qualification</h5>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="qualification"
+                    placeholder="Enter Qualification"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <h5 for="place">Previous Experience</h5>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="experience"
+                    placeholder="Enter Experience"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <h5 for="branch">Branch to Work At</h5>
+                  <select name="Branch" id="branch" class="form-control" required>
+                    <option value="Options">Options</option>
+                    <option value="Vishakhapatnam">Vishakhapatnam</option>
+                    <option value="Hyderabad">Hyderabad</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <h5 for="address">Address</h5>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="address"
+                    placeholder="Address"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <h5 for="language">Languages Known</h5>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="language"
+                    placeholder="Enter Languages"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <h5 for="religion">Religion</h5>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="religion"
+                    placeholder="Enter Religion"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <h5 for="country">Nationality</h5>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="country"
+                    placeholder="Nationality"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <h5 for="aadhar">Aadhar No.</h5>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="aadhar"
+                    placeholder="Aadhar No."
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <h5 for="account">Bank Account No.</h5>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="account"
+                    placeholder="Bank Account No."
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <h5 for="ifsc">IFSC Code</h5>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="ifsc"
+                    placeholder="IFSC Code"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <h5 for="phnNumer">Contact Number</h5>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="phone"
+                    placeholder="Contact Number"
+                    required
+                  />
+                </div>
+                <button type="button" class="btn btn-danger" onClick="openform()">Close</button>
+                <button type="submit" class="btn btn-primary" id="submitID" onClick="sendEmail()">Submit</button>
               </div>
-              <div class="form-group">
-                <h5 for="dob">Date of Birth</h5>
-                <input
-                  type="date"
-                  class="form-control"
-                  id="dob"
-                  placeholder="Date of Birth"
-                  required
-                  onchange="calculateAge()"
-                />
-                <span class="text-danger" id="errAge" style="display: none;">Age is less than 18</span>
-              </div>
-              
-              <div class="form-group">
-                <h5 for="age">Age</h5>
-                <input
-                  type="number"
-                  class="form-control"
-                  id="age"
-                  placeholder="Enter Age"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <h5 for="email">Email</h5>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="email"
-                  placeholder="Enter email"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <h5 for="email">Job</h5>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="job"
-                  placeholder="Enter job"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <h5 for="place">Native Place</h5>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="place"
-                  placeholder="Enter Native Place"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <h5 for="qualification">Education Qualification</h5>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="qualification"
-                  placeholder="Enter Qualification"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <h5 for="place">Previous Experience</h5>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="experience"
-                  placeholder="Enter Experience"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <h5 for="branch">Branch to Work At</h5>
-                <select name="Branch" id="branch" class="form-control" required>
-                  <option value="Options">Options</option>
-                  <option value="Vishakhapatnam">Vishakhapatnam</option>
-                  <option value="Hyderabad">Hyderabad</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <h5 for="address">Address</h5>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="address"
-                  placeholder="Address"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <h5 for="language">Languages Known</h5>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="language"
-                  placeholder="Enter Languages"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <h5 for="religion">Religion</h5>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="religion"
-                  placeholder="Enter Religion"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <h5 for="country">Nationality</h5>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="country"
-                  placeholder="Nationality"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <h5 for="aadhar">Aadhar No.</h5>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="aadhar"
-                  placeholder="Aadhar No."
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <h5 for="account">Bank Account No.</h5>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="account"
-                  placeholder="Bank Account No."
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <h5 for="ifsc">IFSC Code</h5>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="ifsc"
-                  placeholder="IFSC Code"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <h5 for="phnNumer">Contact Number</h5>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="phone"
-                  placeholder="Contact Number"
-                  required
-                />
-              </div>
-              <button type="button" class="btn btn-danger" onClick="openform()">Close</button>
-              <button class="btn btn-primary" id="submitID" onClick="sendEmail()">Submit</button>
             </form>
           </div>
         </div>

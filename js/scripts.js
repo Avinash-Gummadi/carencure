@@ -64,6 +64,8 @@ var viewlist = 0;
 // 
 var tempjob = ""
 function openform(option) {
+    $('#form_div')[0].style.display = 'block';
+    $('#succ_rply')[0].style.display = 'none';
     if (parseInt(option) == 1) {
         if (document.getElementById("formID").style.display == "flex" && viewlist == 1) {
             console.log("scripts.js if flex");
@@ -114,9 +116,6 @@ function openform(option) {
 // });
 function sendEmail(){
     // document.getElementById('modal').style.display = 'block';
-    $('.modal-backdrop').addClass('show');
-    $('#shadeblack')[0].style.display = 'block';
-    $('#spinner').css( 'display', 'flex' );
     // console.log(tempjob);
     var formData = {
         name : document.getElementById("name").value,
@@ -143,20 +142,25 @@ function sendEmail(){
     const templateId = "template_r3mc06g"
     console.log(formData.splitdate);
     console.log("log b4 email.js is "+ formData);
+    $('.modal-backdrop').addClass('show');
+    $('#shadeblack')[0].style.display = 'block';
+    $('#spinner').css( 'display', 'flex' );
         emailjs.send(serviceId,templateId,formData).then(
             res => {
-                document.getElementById('formID').reset();
+                document.getElementById('formID1').reset();
                 $('.modal-backdrop').removeClass('show');
                 $('#shadeblack')[0].style.display = 'none';
                 $('#spinner')[0].style.display = 'none';
+                $('#form_div')[0].style.display = 'none';
+                $('#succ_rply')[0].style.display = 'block';
             }
         ).catch(err => console.log(err));
         console.log("log b4 email.js is "+ formData);
 }
 
 function calculateAge(){
-    var birthday = document.getElementById("dob").value;
-    const ageDifMs = Date.now() - new Date(birthday).getTime();
+    var jobdob = document.getElementById("dob").value;
+    const ageDifMs = Date.now() - new Date(jobdob).getTime();
     const ageDate = new Date(ageDifMs);
     var age =  Math.abs(ageDate.getUTCFullYear() - 1970);
     if(age<18){

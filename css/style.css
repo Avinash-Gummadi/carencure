@@ -245,7 +245,6 @@ section {
   top: 285px;
   flex-direction: column;
   gap: 5px;
-  background: #c1edc2;
   left: 803px;
   z-index: 999;
 }
