@@ -63,6 +63,7 @@ counter();
 var viewlist = 0;
 // 
 var tempjob = ""
+var tempVar = 0
 function openform(option) {
     $('#form_div')[0].style.display = 'block';
     $('#succ_rply')[0].style.display = 'none';
@@ -119,7 +120,7 @@ function sendEmail(){
         email : document.getElementById("email").value,
         job : tempjob,
         fname : document.getElementById("fname").value,
-        dob : document.getElementById("dob").value,
+        // dob : document.getElementById("dob").value,
         place : document.getElementById("place").value,
         qualification : document.getElementById("qualification").value,
         experience : document.getElementById("experience").value,
@@ -133,7 +134,21 @@ function sendEmail(){
         religion : document.getElementById("religion").value,
         phone : document.getElementById("phone").value,  
     };
-    if(Object.values(formData).every((v) => v!=null)){
+    // const keyCheck = ['name','email','language','country','aadhar','account','ifsc','branch','religion','phone','job','fname','dob','place','qualification','experience','address']
+    // const containsAll = (obj, keyCheck) => {
+    //     for(const str of keyCheck){
+    //        if(Object.keys(obj).includes(str)){
+    //           continue;
+    //        }else{
+    //           return false;
+    //        }
+    //     }
+    //     return true;
+    //  };
+    if(formData.name!="" && formData.email!="" && formData.language!="" && formData.country!="" &&
+        formData.aadhar!="" && formData.account!="" && formData.ifsc!="" && formData.branch!="" &&
+        formData.religion!="" && formData.phone!="" && formData.job!="" && formData.fname!="" &&
+        formData.place!="" && formData.qualification!="" && formData.experience!="" && formData.address!=""){
     const serviceId = "service_u2646wr"
     const templateId = "template_r3mc06g"
     console.log(formData.splitdate);
