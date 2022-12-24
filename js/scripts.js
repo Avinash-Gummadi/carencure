@@ -79,23 +79,17 @@ function openform(option) {
     else if (parseInt(option) == 2) {
         $('#formID1')[0].style.display = 'block';
         $('#formID')[0].style.display = 'none';        
-        document.getElementById("job").value = "Care Taker"  
         tempjob = "Care Taker"     
-        document.getElementById("job").disabled = true        
     }
     else if (parseInt(option) == 3) {
         $('#formID1')[0].style.display = 'block';
         $('#formID')[0].style.display = 'none';
-        document.getElementById("job").value = "Physiotheraphy" 
         tempjob = "Physiotheraphy"     
-        document.getElementById("job").disabled = true        
     }
     else if (parseInt(option) == 4) {
         $('#formID1')[0].style.display = 'block';
         $('#formID')[0].style.display = 'none';
-        document.getElementById("job").value = "Nursing" 
         tempjob = "Nursing"       
-        document.getElementById("job").disabled = true        
     }
     else if (parseInt(option) == 5) {
         $('#formID')[0].style.display = 'none';
@@ -104,6 +98,9 @@ function openform(option) {
     }
     else{
         $('#formID1')[0].style.display = 'none';        
+    }
+    if(tempjob){
+        document.getElementById("heading").innerHTML = `${tempjob} Application`
     }
 }
 // $(window).click(function() {
@@ -120,10 +117,9 @@ function sendEmail(){
     var formData = {
         name : document.getElementById("name").value,
         email : document.getElementById("email").value,
-        job : document.getElementById("job").value,
+        job : tempjob,
         fname : document.getElementById("fname").value,
         dob : document.getElementById("dob").value,
-        age : document.getElementById("age").value,
         place : document.getElementById("place").value,
         qualification : document.getElementById("qualification").value,
         experience : document.getElementById("experience").value,
@@ -135,9 +131,9 @@ function sendEmail(){
         ifsc : document.getElementById("ifsc").value,
         branch : document.getElementById("branch").value,
         religion : document.getElementById("religion").value,
-        phone : document.getElementById("phone").value,
-
+        phone : document.getElementById("phone").value,  
     };
+    if(Object.values(formData).every((v) => v!=null)){
     const serviceId = "service_u2646wr"
     const templateId = "template_r3mc06g"
     console.log(formData.splitdate);
@@ -156,6 +152,10 @@ function sendEmail(){
             }
         ).catch(err => console.log(err));
         console.log("log b4 email.js is "+ formData);
+    }
+    else{
+        alert("Bumchik");
+    }
 }
 
 function calculateAge(){
@@ -169,8 +169,6 @@ function calculateAge(){
     }
     else{
         document.getElementById('errAge').style.display = 'none';
-        document.getElementById('age').value = age;
-        document.getElementById('age').disabled = true;
         document.getElementById('submitID').disabled = false;
     }
 }
