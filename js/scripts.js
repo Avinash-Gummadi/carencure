@@ -59,10 +59,18 @@ var counter = function() {
 	} , { offset: '95%' } );
 };
 counter();
-// 
+//
+var viewlist = 0;
 function openform(option) {
     if (parseInt(option) == 1) {
-        $('#formID')[0].style.display = 'block';        
+        if (document.getElementById("formID").style.display == "flex" && viewlist == 1) {
+            console.log("scripts.js if flex");
+            viewlist = 0;
+            document.getElementById("formID").style.display = "none"
+        }else{
+            $('#formID')[0].style.display = 'flex';
+            viewlist = 1;
+        }
     } 
     else if (parseInt(option) == 2) {
         $('#formID1')[0].style.display = 'block';
@@ -87,14 +95,18 @@ function openform(option) {
         // document.getElementById("job").value = "Nursing"        
         // document.getElementById("job").disabled = true        
     }
-    else if (parseInt(option) == 7) {
-        $('#formID1')[0].style.display = 'none';
-        $('#formID')[0].style.display = 'block';       
-    }
     else{
         $('#formID1')[0].style.display = 'none';        
     }
 }
+// $(window).click(function() {
+//     console.log("scripts.js if window");
+//     if (document.getElementById("formID").style.display == "flex" && viewlist == 1) {
+//         console.log("scripts.js if flex");
+//         viewlist = 0;
+//         document.getElementById("formID").style.display = "none"
+//     }
+// });
 function sendEmail(){
     // document.getElementById('modal').style.display = 'block';
     $('.modal-backdrop').addClass('show');
