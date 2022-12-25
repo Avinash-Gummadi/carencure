@@ -59,13 +59,12 @@ var counter = function() {
 	} , { offset: '95%' } );
 };
 counter();
-//
+var age;
 var viewlist = 0;
-// 
 var tempjob = ""
 var tempVar = 0
 function openform(option) {
-    $('#form_div')[0].style.display = 'block';
+    document.getElementById("errAge").innerHTML = '';
     $('#succ_rply')[0].style.display = 'none';
     if (parseInt(option) == 1) {
         if (document.getElementById("formID").style.display == "flex" && viewlist == 1) {
@@ -80,17 +79,20 @@ function openform(option) {
     else if (parseInt(option) == 2) {
         $('#formID1')[0].style.display = 'block';
         $('#formID')[0].style.display = 'none';        
-        tempjob = "Care Taker"     
+        tempjob = "Care Taker";
+        $('#form_div')[0].style.display = 'block';
     }
     else if (parseInt(option) == 3) {
         $('#formID1')[0].style.display = 'block';
         $('#formID')[0].style.display = 'none';
-        tempjob = "Physiotheraphy"     
+        tempjob = "Physiotheraphy";
+        $('#form_div')[0].style.display = 'block';
     }
     else if (parseInt(option) == 4) {
         $('#formID1')[0].style.display = 'block';
         $('#formID')[0].style.display = 'none';
-        tempjob = "Nursing"       
+        tempjob = "Nursing";
+        $('#form_div')[0].style.display = 'block';
     }
     else if (parseInt(option) == 5) {
         $('#formID')[0].style.display = 'none';
@@ -119,8 +121,9 @@ function sendEmail(){
         name : document.getElementById("name").value,
         email : document.getElementById("email").value,
         job : tempjob,
-        fname : document.getElementById("fname").value,
-        // dob : document.getElementById("dob").value,
+        fathername : document.getElementById("fathername").value,
+        dob : document.getElementById("dob").value,
+        age: age,
         place : document.getElementById("place").value,
         qualification : document.getElementById("qualification").value,
         experience : document.getElementById("experience").value,
@@ -147,7 +150,7 @@ function sendEmail(){
     //  };
     if(formData.name!="" && formData.email!="" && formData.language!="" && formData.country!="" &&
         formData.aadhar!="" && formData.account!="" && formData.ifsc!="" && formData.branch!="" &&
-        formData.religion!="" && formData.phone!="" && formData.job!="" && formData.fname!="" &&
+        formData.religion!="" && formData.phone!="" && formData.job!="" && formData.fathername!="" &&
         formData.place!="" && formData.qualification!="" && formData.experience!="" && formData.address!=""){
     const serviceId = "service_u2646wr"
     const templateId = "template_r3mc06g"
@@ -169,21 +172,26 @@ function sendEmail(){
         console.log("log b4 email.js is "+ formData);
     }
     else{
-        alert("Bumchik");
+        document.getElementById('all_fields').style.display = "block";
     }
 }
-
 function calculateAge(){
     var jobdob = document.getElementById("dob").value;
     const ageDifMs = Date.now() - new Date(jobdob).getTime();
     const ageDate = new Date(ageDifMs);
-    var age =  Math.abs(ageDate.getUTCFullYear() - 1970);
+    age =  Math.abs(ageDate.getUTCFullYear() - 1970);
     if(age<18){
-        document.getElementById('errAge').style.display = 'block';
+        document.getElementById("errAge").innerHTML = `Age is less than 18`;
+        $('#errAge').removeClass('text-success');
+        $('#errAge').addClass('text-danger');
+        // document.getElementById('errAge').style.display = 'block';
         document.getElementById('submitID').disabled = true;
     }
     else{
-        document.getElementById('errAge').style.display = 'none';
+        document.getElementById("errAge").innerText = `Your age is ${age} years`;
+        $('#errAge').removeClass('text-danger');
+        $('#errAge').addClass('text-success');
+        // document.getElementById('errAge').style.display = 'none';
         document.getElementById('submitID').disabled = false;
     }
 }
