@@ -271,9 +271,9 @@ section {
     margin-top: 2rem !important;
     margin-bottom: 2rem !important;
   }
-  #formID {
-    top: 350px;
-    left: 130px !important;
+#formID {
+  top: 321px;
+  left: 40% !important;
 }
 #heading{
   font-size: 25px;
@@ -1139,6 +1139,16 @@ a.email-a:hover{
   #succ_rply h1{
     font-size: 26px;
   }
+  .banner {
+    padding: 130px 0 1% 0 !important;
+  }
+  .logo h2 {
+    font-size: 18px !important;
+}
+#formID {
+  top: 350px;
+  left: 130px !important;
+}
 }
 
 @media screen and (max-width: 479px) {
