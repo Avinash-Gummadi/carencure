@@ -408,10 +408,14 @@
           </div>
         </div>
         <div id="formID" style="display: none;">
-          <button type="button" class="btn btn-success" style="border-radius: 0;border-top-left-radius: 7px;border-top-right-radius: 7px;" onClick="openform(2)">Care Taker</button>
-          <button type="button" class="btn btn-success" onClick="openform(3)" style="border-radius: 0;">Physiotheraphy</button>
+          <button type="button" class="btn btn-success"
+            style="border-radius: 0;border-top-left-radius: 7px;border-top-right-radius: 7px;"
+            onClick="openform(2)">Care Taker</button>
+          <button type="button" class="btn btn-success" onClick="openform(3)"
+            style="border-radius: 0;">Physiotheraphy</button>
           <button type="button" class="btn btn-success" onClick="openform(4)" style="border-radius: 0;">Nursing</button>
-          <button type="button" class="btn btn-danger" onClick="openform(5)" style="border-radius: 0;border-bottom-right-radius: 7px;border-bottom-left-radius: 7px;">Close</button>
+          <button type="button" class="btn btn-danger" onClick="openform(5)"
+            style="border-radius: 0;border-bottom-right-radius: 7px;border-bottom-left-radius: 7px;">Close</button>
         </div>
         <div class="row align-items-center justify-content-center">
           <form class="col-md-8 py-3" onsubmit="return !2" id="formID1" style="display: none;">
@@ -426,7 +430,8 @@
                   <input type="text" class="form-control" id="name" placeholder="Enter Full Name" required />
                 </div>
                 <div class="form-group" style="flex: 45%;">
-                  <input type="text" class="form-control" id="fathername" placeholder="Father's/Husband Name" required />
+                  <input type="text" class="form-control" id="fathername" placeholder="Father's/Husband Name"
+                    required />
                 </div>
               </div>
               <div class="form-group d-flex align-items-baseline justify-content-center flex-wrap">
@@ -445,15 +450,21 @@
                   <input type="text" class="form-control" id="phone" placeholder="Mobile Number" required />
                 </div>
               </div>
-              <div class="form-group">
-                <input type="text" class="form-control" id="place" placeholder="Enter Native Place" required />
+              <div class="d-flex flex-wrap" style="gap: 2px;">
+                <div class="form-group" style="flex: 30%;">
+                  <input type="text" class="form-control" id="place" placeholder="Enter Native Place" required />
+                </div>
+                <div class="form-group" style="flex: 60%;">
+                  <input type="text" class="form-control" id="address" placeholder="Address" required />
+                </div>
               </div>
-              <div class="form-group">
-                <input type="text" class="form-control" id="address" placeholder="Address" required />
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" id="qualification" placeholder="Education Qualification"
-                  required />
+              <div class="d-flex flex-wrap" style="gap: 2px;">
+                <div class="form-group" style="flex: 45%;">
+                  <input type="text" class="form-control" id="qualification" placeholder="Education Qualification" required />
+                </div>
+                <div class="form-group" style="flex: 45%;">
+                  <input type="text" class="form-control" id="language" placeholder="Enter Languages Known" required />
+                </div>
               </div>
               <div class="form-group">
                 <input type="text" class="form-control" id="experience" placeholder="Previous Experience" required />
@@ -464,9 +475,6 @@
                   <option value="Vishakhapatnam">Vishakhapatnam</option>
                   <option value="Hyderabad">Hyderabad</option>
                 </select>
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" id="language" placeholder="Enter Languages Known" required />
               </div>
               <div class="d-flex flex-wrap" style="gap: 2px;">
                 <div class="form-group" style="flex: 45%;">

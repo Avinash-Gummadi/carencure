@@ -273,7 +273,7 @@ section {
   }
   #formID {
     top: 350px;
-    left: 130px;
+    left: 130px !important;
 }
 #heading{
   font-size: 25px;
@@ -342,14 +342,18 @@ section {
 }
 
 @media screen and (max-width: 1199px) {
+  .logo{
+    width: 100px;
+  }
+  .logo h2{font-size: 26px;}
   .banner {
-    padding-top: 15%;
+    padding: 4% 0;
   }
 }
 
 @media screen and (max-width: 767px) {
   .banner {
-    padding-top: 130px;
+    padding: 40% 0 1% 0 !important;
     margin-top: 20px;
   }
 }
@@ -747,6 +751,9 @@ a.email-a:hover{
   .appointment .appointment-wrap figure {
     display: none;
   }
+  #formID {
+    left: 53%;
+}
 }
 
 .appointment .appointment-wrap .appointment-form {
@@ -1125,6 +1132,12 @@ a.email-a:hover{
 @media screen and (max-width: 575px) {
   .comments .single-comment {
     padding-right: 15px;
+  }
+  .logo{
+    max-width: 90px;
+  }
+  #succ_rply h1{
+    font-size: 26px;
   }
 }
 
