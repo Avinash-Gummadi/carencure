@@ -1,62 +1,62 @@
-(function($) {
+(function ($) {
     'use strict';
 
     $('.service-caro').owlCarousel({
-        loop:false,
-        margin:5,
-        nav:false,
-        responsive:{
-            0:{
-                items:1
+        loop: false,
+        margin: 5,
+        nav: false,
+        responsive: {
+            0: {
+                items: 1
             },
-            600:{
-                items:3
+            600: {
+                items: 3
             },
-            1000:{
-                items:4
+            1000: {
+                items: 4
             }
         }
     })
 
     $('.test-caro').owlCarousel({
-        autoplay:true,
+        autoplay: true,
         dots: true,
-        loop:true,
-        nav:false,
+        loop: true,
+        nav: false,
         items: 1
     })
 
-    $('.mobile-menu').on('click', function() {
+    $('.mobile-menu').on('click', function () {
         $('.primary-menu ul').slideToggle();
     })
 
-}) (jQuery)
+})(jQuery)
 // 
-var counter = function() {
-	
-	$('.section-counter').waypoint( function( direction ) {
+var counter = function () {
 
-		if( direction === 'down' && !$(this.element).hasClass('ftco-animated') ) {
+    $('.section-counter').waypoint(function (direction) {
 
-			var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',')
-			$(this.element).find('.number-counter').each(function(){
-				var $this = $(this),
-					num = $this.data('number');
-				$this.animateNumber(
-				  {
-				    number: num,
-				    numberStep: comma_separator_number_step
-				  }, 
-				  {
-				  	easing: 'swing',
-    				duration: 3000
-				  }
-				);
-			});
-			
-		}
+        if (direction === 'down' && !$(this.element).hasClass('ftco-animated')) {
 
-	} , { offset: '95%' } );
+            var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',')
+            $(this.element).find('.number-counter').each(function () {
+                var $this = $(this),
+                    num = $this.data('number');
+                $this.animateNumber(
+                    {
+                        number: num,
+                        numberStep: comma_separator_number_step
+                    },
+                    {
+                        easing: 'swing',
+                        duration: 3000
+                    }
+                );
+            });
+
+        }
+
+    }, { offset: '95%' });
 };
 counter();
 var age;
@@ -71,14 +71,14 @@ function openform(option) {
             console.log("scripts.js if flex");
             viewlist = 0;
             document.getElementById("formID").style.display = "none"
-        }else{
+        } else {
             $('#formID')[0].style.display = 'flex';
             viewlist = 1;
         }
-    } 
+    }
     else if (parseInt(option) == 2) {
         $('#formID1')[0].style.display = 'block';
-        $('#formID')[0].style.display = 'none';        
+        $('#formID')[0].style.display = 'none';
         tempjob = "Care Taker";
         $('#form_div')[0].style.display = 'block';
     }
@@ -99,10 +99,10 @@ function openform(option) {
         // document.getElementById("job").value = "Nursing"        
         // document.getElementById("job").disabled = true        
     }
-    else{
-        $('#formID1')[0].style.display = 'none';        
+    else {
+        $('#formID1')[0].style.display = 'none';
     }
-    if(tempjob){
+    if (tempjob) {
         document.getElementById("heading").innerHTML = `${tempjob} Application`
     }
 }
@@ -114,28 +114,28 @@ function openform(option) {
 //         document.getElementById("formID").style.display = "none"
 //     }
 // });
-function sendEmail(){
+function sendEmail() {
     // document.getElementById('modal').style.display = 'block';
     // console.log(tempjob);
     var formData = {
-        name : document.getElementById("name").value,
-        email : document.getElementById("email").value,
-        job : tempjob,
-        fathername : document.getElementById("fathername").value,
-        dob : document.getElementById("dob").value,
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        job: tempjob,
+        fathername: document.getElementById("fathername").value,
+        dob: document.getElementById("dob").value,
         age: age,
-        place : document.getElementById("place").value,
-        qualification : document.getElementById("qualification").value,
-        experience : document.getElementById("experience").value,
-        address : document.getElementById("address").value,
-        language : document.getElementById("language").value,
-        country : document.getElementById("country").value,
-        aadhar : document.getElementById("aadhar").value,
-        account : document.getElementById("account").value,
-        ifsc : document.getElementById("ifsc").value,
-        branch : document.getElementById("branch").value,
-        religion : document.getElementById("religion").value,
-        phone : document.getElementById("phone").value,  
+        place: document.getElementById("place").value,
+        qualification: document.getElementById("qualification").value,
+        experience: document.getElementById("experience").value,
+        address: document.getElementById("address").value,
+        language: document.getElementById("language").value,
+        country: document.getElementById("country").value,
+        aadhar: document.getElementById("aadhar").value,
+        account: document.getElementById("account").value,
+        ifsc: document.getElementById("ifsc").value,
+        branch: document.getElementById("branch").value,
+        religion: document.getElementById("religion").value,
+        phone: document.getElementById("phone").value,
     };
     // const keyCheck = ['name','email','language','country','aadhar','account','ifsc','branch','religion','phone','job','fname','dob','place','qualification','experience','address']
     // const containsAll = (obj, keyCheck) => {
@@ -148,18 +148,18 @@ function sendEmail(){
     //     }
     //     return true;
     //  };
-    if(formData.name!="" && formData.email!="" && formData.language!="" && formData.country!="" &&
-        formData.aadhar!="" && formData.account!="" && formData.ifsc!="" && formData.branch!="" &&
-        formData.religion!="" && formData.phone!="" && formData.job!="" && formData.fathername!="" &&
-        formData.place!="" && formData.qualification!="" && formData.experience!="" && formData.address!=""){
-    const serviceId = "service_u2646wr"
-    const templateId = "template_r3mc06g"
-    console.log(formData.splitdate);
-    console.log("log b4 email.js is "+ formData);
-    $('.modal-backdrop').addClass('show');
-    $('#shadeblack')[0].style.display = 'block';
-    $('#spinner').css( 'display', 'flex' );
-        emailjs.send(serviceId,templateId,formData).then(
+    if (formData.name != "" && formData.email != "" && formData.language != "" && formData.country != "" &&
+        formData.aadhar != "" && formData.account != "" && formData.ifsc != "" && formData.branch != "" &&
+        formData.religion != "" && formData.phone != "" && formData.job != "" && formData.fathername != "" &&
+        formData.place != "" && formData.qualification != "" && formData.experience != "" && formData.address != "") {
+        const serviceId = "service_u2646wr"
+        const templateId = "template_r3mc06g"
+        console.log(formData.splitdate);
+        console.log("log b4 email.js is " + formData);
+        $('.modal-backdrop').addClass('show');
+        $('#shadeblack')[0].style.display = 'block';
+        $('#spinner').css('display', 'flex');
+        emailjs.send(serviceId, templateId, formData).then(
             res => {
                 document.getElementById('formID1').reset();
                 $('.modal-backdrop').removeClass('show');
@@ -169,25 +169,25 @@ function sendEmail(){
                 $('#succ_rply')[0].style.display = 'block';
             }
         ).catch(err => console.log(err));
-        console.log("log b4 email.js is "+ formData);
+        console.log("log b4 email.js is " + formData);
     }
-    else{
+    else {
         document.getElementById('all_fields').style.display = "block";
     }
 }
-function calculateAge(){
+function calculateAge() {
     var jobdob = document.getElementById("dob").value;
     const ageDifMs = Date.now() - new Date(jobdob).getTime();
     const ageDate = new Date(ageDifMs);
-    age =  Math.abs(ageDate.getUTCFullYear() - 1970);
-    if(age<18){
+    age = Math.abs(ageDate.getUTCFullYear() - 1970);
+    if (age < 18) {
         document.getElementById("errAge").innerHTML = `Age is less than 18`;
         $('#errAge').removeClass('text-success');
         $('#errAge').addClass('text-danger');
         // document.getElementById('errAge').style.display = 'block';
         document.getElementById('submitID').disabled = true;
     }
-    else{
+    else {
         document.getElementById("errAge").innerText = `Your age is ${age} years`;
         $('#errAge').removeClass('text-danger');
         $('#errAge').addClass('text-success');
@@ -195,3 +195,12 @@ function calculateAge(){
         document.getElementById('submitID').disabled = false;
     }
 }
+
+$("#chat-circle").click(function () {
+    $("#chat-circle").toggle('scale');
+    $(".chat-box").toggle('scale');
+})
+$(".chat-box-toggle").click(function () {
+    $("#chat-circle").toggle('scale');
+    $(".chat-box").toggle('scale');
+})
