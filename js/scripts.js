@@ -114,6 +114,28 @@ function openform(option) {
 //         document.getElementById("formID").style.display = "none"
 //     }
 // });
+function sendPatientEmail(){
+    var formData2 = {
+        pname: document.getElementById("p_name").value,
+        pemail: document.getElementById("p_email").value,
+        age: document.getElementById("p_age").value,
+        location: document.getElementById("p_location").value,
+        service: document.getElementById("service").value,
+        gender: document.getElementById("gender").value,
+        mobile: document.getElementById("p_number").value,
+    }
+    const serviceId = "service_u2646wr"
+    const templateId = "template_3drb5ku"
+    emailjs.send(serviceId, templateId, formData2).then(
+        res => {
+            alert("Sent successfully");
+        },
+        console.log(formData2)
+    ).catch(err => console.log(err));
+    console.log("log b4 email.js is " + formData2);
+}
+
+
 function sendEmail() {
     // document.getElementById('modal').style.display = 'block';
     // console.log(tempjob);
