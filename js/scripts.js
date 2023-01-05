@@ -118,7 +118,7 @@ function sendPatientEmail(){
     var formData2 = {
         pname: document.getElementById("p_name").value,
         pemail: document.getElementById("p_email").value,
-        age: document.getElementById("p_age").value,
+        page: document.getElementById("p_age").value,
         location: document.getElementById("p_location").value,
         service: document.getElementById("service").value,
         gender: document.getElementById("gender").value,
@@ -129,6 +129,7 @@ function sendPatientEmail(){
     emailjs.send(serviceId, templateId, formData2).then(
         res => {
             alert("Sent successfully");
+            document.getElementById('servicereq').reset();
         },
         console.log(formData2)
     ).catch(err => console.log(err));
