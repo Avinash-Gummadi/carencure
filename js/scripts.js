@@ -124,16 +124,23 @@ function sendPatientEmail(){
         gender: document.getElementById("gender").value,
         mobile: document.getElementById("p_number").value,
     }
-    const serviceId = "service_u2646wr"
-    const templateId = "template_3drb5ku"
-    emailjs.send(serviceId, templateId, formData2).then(
-        res => {
-            alert("Sent successfully");
-            document.getElementById('servicereq').reset();
-        },
-        console.log(formData2)
-    ).catch(err => console.log(err));
-    console.log("log b4 email.js is " + formData2);
+    if (formData2.pname!="" && formData2.pemail!="" && formData2.page!="" && formData2.location!="" && formData2.service!="" && formData2.gender!="" && formData2.mobile!="") {
+        const serviceId = "service_u2646wr"
+        const templateId = "template_3drb5ku"
+        $('#servicereq').addClass('opacity-25');
+        $('#formtwoload')[0].style.display = 'block';
+        emailjs.send(serviceId, templateId, formData2).then(
+            res => {
+                document.getElementById('servicereq').reset();
+                $('#servicereq').removeClass('opacity-25');
+                $('#formtwoload')[0].style.display = 'none';
+            },
+            console.log(formData2)
+        ).catch(err => console.log(err));
+        console.log("log b4 email.js is " + formData2);        
+    } else {
+        document.getElementById('all_fields2').style.display = "block";
+    }
 }
 
 
@@ -177,8 +184,6 @@ function sendEmail() {
         formData.place != "" && formData.qualification != "" && formData.experience != "" && formData.address != "") {
         const serviceId = "service_u2646wr"
         const templateId = "template_r3mc06g"
-        console.log(formData.splitdate);
-        console.log("log b4 email.js is " + formData);
         $('.modal-backdrop').addClass('show');
         $('#shadeblack')[0].style.display = 'block';
         $('#spinner').css('display', 'flex');
