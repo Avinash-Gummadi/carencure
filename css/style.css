@@ -328,7 +328,7 @@ section {
 }
 
 .fix-menu span:hover{
-  color: #ff817e !important;
+  color: #8eae03 !important;
   scale: 1.1;
 }
 .logo {
@@ -998,6 +998,9 @@ a.email-a:hover{
   position: relative;
   width: 100%;
 }
+.team .single-memb img{
+  border-radius: 2%;
+}
 
 @media screen and (max-width: 767px) {
   .team .single-memb {
@@ -1011,7 +1014,7 @@ a.email-a:hover{
   box-shadow: 0 5px 20px #f0f0f0;
   max-width: calc( 100% - 60px);
   margin: -50px auto 0;
-  padding: 30px;
+  padding: 25px;
   position: relative;
   text-align: center;
   -webkit-transition: all 300ms ease-in-out;
@@ -1041,45 +1044,11 @@ a.email-a:hover{
 
 .team .single-memb .memb-details span {
   display: block;
-  margin-bottom: 15px;
-}
-
-.team .single-memb .memb-social {
-  margin-top: -30px;
-  -webkit-transition: all 300ms ease-in-out;
-  -o-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out;
-  opacity: 0;
-  visibility: hidden;
-}
-
-.team .single-memb .memb-social a {
-  border: 1px solid #30383b;
-  border-radius: 50%;
-  color: #30383b;
-  display: inline-block;
-  font-size: 13px;
-  text-align: center;
-  line-height: 30px;
-  margin: 0 5px;
-  height: 30px;
-  width: 30px;
-}
-
-.team .single-memb .memb-social a:hover {
-  background-color: #ff817e;
-  border-color: #ff817e;
-  color: #fff;
+  margin-bottom: 5px;
 }
 
 .team .single-memb:hover .memb-details {
   margin-top: -84px;
-}
-
-.team .single-memb:hover .memb-social {
-  margin-top: 0;
-  opacity: 1;
-  visibility: visible;
 }
 
 .contact address {
