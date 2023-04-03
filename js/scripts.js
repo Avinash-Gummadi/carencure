@@ -116,8 +116,8 @@ function sendPatientEmail(){
         mobile: document.getElementById("p_number").value,
     }
     if (formData2.pname!="" && formData2.pemail!="" && formData2.page!="" && formData2.location!="" && formData2.service!="" && formData2.gender!="" && formData2.mobile!="") {
-        const serviceId = "service_u2646wr"
-        const templateId = "template_3drb5ku"
+        const serviceId = "service_10ufs0u"
+        const templateId = "template_caxfivs"
         $('#servicereq').addClass('opacity-25');
         $('#formtwoload')[0].style.display = 'block';
         emailjs.send(serviceId, templateId, formData2).then(
@@ -161,8 +161,8 @@ function sendEmail() {
         formData.aadhar != "" && formData.account != "" && formData.ifsc != "" && formData.branch != "" &&
         formData.religion != "" && formData.phone != "" && formData.job != "" && formData.fathername != "" &&
         formData.place != "" && formData.qualification != "" && formData.experience != "" && formData.address != "") {
-        const serviceId = "service_u2646wr"
-        const templateId = "template_r3mc06g"
+        const serviceId = "service_10ufs0u"
+        const templateId = "template_srpkeyd"
         $('.modal-backdrop').addClass('show');
         $('#shadeblack')[0].style.display = 'block';
         $('#spinner').css('display', 'flex');
