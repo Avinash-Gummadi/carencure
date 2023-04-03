@@ -31,7 +31,7 @@
     })
 
 })(jQuery)
-// 
+
 var counter = function () {
 
     $('.section-counter').waypoint(function (direction) {
@@ -95,9 +95,7 @@ function openform(option) {
         $('#form_div')[0].style.display = 'block';
     }
     else if (parseInt(option) == 5) {
-        $('#formID')[0].style.display = 'none';
-        // document.getElementById("job").value = "Nursing"        
-        // document.getElementById("job").disabled = true        
+        $('#formID')[0].style.display = 'none';    
     }
     else {
         $('#formID1')[0].style.display = 'none';
@@ -106,14 +104,7 @@ function openform(option) {
         document.getElementById("heading").innerHTML = `${tempjob} Application`
     }
 }
-// $(window).click(function() {
-//     console.log("scripts.js if window");
-//     if (document.getElementById("formID").style.display == "flex" && viewlist == 1) {
-//         console.log("scripts.js if flex");
-//         viewlist = 0;
-//         document.getElementById("formID").style.display = "none"
-//     }
-// });
+
 function sendPatientEmail(){
     var formData2 = {
         pname: document.getElementById("p_name").value,
@@ -145,8 +136,6 @@ function sendPatientEmail(){
 
 
 function sendEmail() {
-    // document.getElementById('modal').style.display = 'block';
-    // console.log(tempjob);
     var formData = {
         name: document.getElementById("name").value,
         email: document.getElementById("email").value,
@@ -167,17 +156,7 @@ function sendEmail() {
         religion: document.getElementById("religion").value,
         phone: document.getElementById("phone").value,
     };
-    // const keyCheck = ['name','email','language','country','aadhar','account','ifsc','branch','religion','phone','job','fname','dob','place','qualification','experience','address']
-    // const containsAll = (obj, keyCheck) => {
-    //     for(const str of keyCheck){
-    //        if(Object.keys(obj).includes(str)){
-    //           continue;
-    //        }else{
-    //           return false;
-    //        }
-    //     }
-    //     return true;
-    //  };
+
     if (formData.name != "" && formData.email != "" && formData.language != "" && formData.country != "" &&
         formData.aadhar != "" && formData.account != "" && formData.ifsc != "" && formData.branch != "" &&
         formData.religion != "" && formData.phone != "" && formData.job != "" && formData.fathername != "" &&
@@ -212,14 +191,12 @@ function calculateAge() {
         document.getElementById("errAge").innerHTML = `Age is less than 18`;
         $('#errAge').removeClass('text-success');
         $('#errAge').addClass('text-danger');
-        // document.getElementById('errAge').style.display = 'block';
         document.getElementById('submitID').disabled = true;
     }
     else {
         document.getElementById("errAge").innerText = `Your age is ${age} years`;
         $('#errAge').removeClass('text-danger');
         $('#errAge').addClass('text-success');
-        // document.getElementById('errAge').style.display = 'none';
         document.getElementById('submitID').disabled = false;
     }
 }
